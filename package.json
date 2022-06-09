@@ -2,7 +2,7 @@
   "name": "spl-language-support",
   "displayName": "SPL Language Support",
   "description": "Language Support for the Simple Programming Language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/Tch1b0/spl-language-support",
   "engines": {
     "vscode": "^1.67.0"
