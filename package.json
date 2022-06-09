@@ -1,0 +1,35 @@
+{
+  "name": "spl-language-support",
+  "displayName": "SPL Language Support",
+  "description": "Language Support for the Simple Programming Language",
+  "version": "1.0.0",
+  "repository": "https://github.com/Tch1b0/spl-language-support",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "spl",
+        "aliases": [
+          "SPL",
+          "spl"
+        ],
+        "extensions": [
+          ".spl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "spl",
+        "scopeName": "source.spl",
+        "path": "./syntaxes/spl.tmLanguage.json"
+      }
+    ]
+  }
+}

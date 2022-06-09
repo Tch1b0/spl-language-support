@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "SPL",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.spl",
+                    "match": "\\b(if|else|while|proc|var|ref|type|of)\\b"
+                },
+                {
+                    "name": "entity.name.class",
+                    "match": "\\b(int|array)\\b"
+                },
+                {
+                    "name": "constant.numeric",
+                    "match": "\\b(([0-9]+(\\.?[0-9]+)?)|(0x[0-9a-fA-F]+))\\b"
+                },
+                {
+                    "name": "constant.character",
+                    "match": "'\\\\?.{1}'"
+                },
+                {
+                    "name": "comment.line",
+                    "match": "\\/\\/.+"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "[a-zA-Z\\_][a-zA-Z0-9\\_]+?\\("
+                }
+            ]
+        }
+    },
+    "scopeName": "source.spl"
+}

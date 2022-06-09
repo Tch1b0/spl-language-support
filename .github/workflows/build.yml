@@ -1,0 +1,32 @@
+name: Release package
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install node.js
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm i -g vsce
+
+      - name: Create "dist" directory
+        run: mkdir dist
+
+      - name: Build extension
+        run: vsce package -o ./dist/
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - uses: AButler/upload-release-assets@v2.0
+        with:
+          files: "dist/*"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
