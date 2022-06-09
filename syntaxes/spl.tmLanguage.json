@@ -34,7 +34,7 @@
         },
         {
           "name": "entity.name.function",
-          "match": "[a-zA-Z\\_][a-zA-Z0-9\\_]+?\\("
+          "match": "[a-zA-Z\\_][a-zA-Z0-9\\_]+?(?=\\()"
         }
       ]
     }
